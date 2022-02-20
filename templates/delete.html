@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="card">
+        <div class="card-header">Delete Task</div>
+        <div class="card-body">
+                <form action="/deleteTodo/{{ current_todo.id }}" method="post"> {% csrf_token %}
+                    <p class="card-text">Are you sure you want to delete 
+                        <span class="task" style="color: #fe6993; background-color: rgba(254, 105, 147, 0.1); border-radius: 3px; padding: 0.2em; line-height: 2em;"
+                        >{{ current_todo.task_name }}</span>?</p>
+                    <a href="{% url 'home' %}" class="btn btn-info" role="button" style="color: white;">No, go back</a>
+                    <button type="submit" class="btn btn-danger">Yes, delete</button>
+                </form>
+            </div>
+        </div>
+    </div>  
+{% endblock content %}
