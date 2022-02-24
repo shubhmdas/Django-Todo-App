@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django.urls import path
-from todo.views import index, addTodo, deleteTodo, completeTodo, updateTodo
+from todo.views import index, addTodo, DeleteTodo, completeTodo, UpdateTodo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='home'),
     path('addTodo/', addTodo, name='addTodo'),
-    path('deleteTodo/<int:todo_id>', deleteTodo, name='deleteTodo'),
-    path('completeTodo/<int:todo_id>', completeTodo, name='completeTodo'),
-    path('updateTodo/<int:todo_id>', updateTodo, name='updateTodo'),
+    path('deleteTodo/<todo_id>', DeleteTodo.as_view(), name='deleteTodo'),
+    path('completeTodo/<todo_id>', completeTodo, name='completeTodo'),
+    path('updateTodo/<todo_id>', UpdateTodo.as_view(), name='updateTodo'),
 ]
