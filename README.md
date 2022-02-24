@@ -1,6 +1,5 @@
 ![](https://img.shields.io/badge/-Django-green)
 ![](https://img.shields.io/badge/-Bootstrap-blue)
-![](https://img.shields.io/badge/-Beginner-orange)
 <div id="top"></div>
 
 
